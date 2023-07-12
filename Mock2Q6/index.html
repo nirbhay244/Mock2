@@ -1,16 +1,21 @@
-<!-- 2. Create a app where you have an input box and whenever a user types something in the input box and hits submit it should be added on the webpage below the input box
-5 points -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Input Box App</title>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title>Custom Modal Window</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <input type="text" id="inputText" placeholder="Enter text">
-  <button id="submitBtn">Submit</button>
-  <ul id="items-list"></ul>
+  <h1>Custom Modal Window Example</h1>
+  <button id="openModalBtn">Open Modal</button>
 
-  <script src="./script.js"></script>
+  <div id="modalOverlay">
+    <div id="modalContent">
+      <h2>Modal Window</h2>
+      <p>This is the content of the modal window.</p>
+      <button id="closeModalBtn">Close Modal</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,15 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const inputBox = document.getElementById("input-box");
-    const submitButton = document.getElementById("submit-btn");
-    const itemsList = document.getElementById("items-list");
-  
-    submitButton.addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent form submission
-  
-      const newItem = document.createElement("li");
-      newItem.textContent = inputBox.value;
-      itemsList.appendChild(newItem);
-      inputBox.value = "";
-    });
-  });
-  
+var openModalBtn = document.getElementById('openModalBtn');
+var closeModalBtn = document.getElementById('closeModalBtn');
+var modalOverlay = document.getElementById('modalOverlay');
+var body = document.body;
+
+openModalBtn.addEventListener('click', function() {
+  modalOverlay.style.display = 'block';
+  body.classList.add('modal-open');
+});
+
+closeModalBtn.addEventListener('click', function() {
+  modalOverlay.style.display = 'none';
+  body.classList.remove('modal-open');
+});
+
+modalOverlay.addEventListener('click', function(event) {
+  if (event.target === modalOverlay) {
+    modalOverlay.style.display = 'none';
+    body.classList.remove('modal-open');
+  }
+});
