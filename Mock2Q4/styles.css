@@ -1,0 +1,58 @@
+/* Base navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-brand {
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles for smaller screens */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Show the menu on larger screens */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
